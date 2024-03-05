@@ -1,0 +1,173 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+  margin: 0; /* Define a margem externa como zero */
+  padding: 0; /* Define o preenchimento como zero */
+  box-sizing: border-box; /* Garante que a largura e altura incluam o preenchimento e a borda, mas não a margem */
+}
+
+/* Fontes */
+body {
+  font-family: 'Pacifico', cursive; /* Define a fonte manuscrita 'Pacifico' para todo o corpo */
+  text-align: justify; /* Justifica todo o texto */
+}
+
+h1,
+h2,
+p {
+  font-family: 'Pacifico', cursive; /* Define a fonte manuscrita 'Pacifico' para títulos e parágrafos */
+  text-align: center; /* Centraliza os títulos */
+  margin-top: 40px; /* Adiciona espaçamento acima do conteúdo */
+
+}
+
+/* Layout e posicionamento */
+.container {
+  display: flex; /* Exibe os elementos como um flex container */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: flex-start; /* Alinha o conteúdo ao topo verticalmente */
+}
+
+.sidebar {
+  width: 200px; /* Define a largura da barra lateral */
+  background: linear-gradient(to bottom, #4bb2d1, #4bb2d1); /* Aplica um gradiente azul ao fundo */
+  color: #fff; /* Define a cor do texto como branco */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao transform */
+  overflow: hidden; /* Esconde qualquer conteúdo que se estenda além da barra lateral */
+  height: 100vh; /* Define a altura da barra lateral como 100% da altura da viewport */
+  position: fixed; /* Fixa a barra lateral na posição */
+  left: 0; /* Alinha a barra lateral à esquerda */
+  top: 0; /* Alinha a barra lateral ao topo */
+  transform: translateX(-100%); /* Desloca a barra lateral para fora da tela */
+  text-align: left; /* Alinha o texto à esquerda */
+  padding-top: 20px; /* Adiciona espaço acima do conteúdo do sidebar */
+}
+
+.sidebarMenu {
+  margin-top: 50px; /* Adiciona espaço acima da lista de itens do menu */
+}
+
+.sidebarMenu li {
+  margin-bottom: 20px; /* Adiciona espaçamento entre os itens da lista */
+}
+
+.sidebar.active {
+  transform: translateX(0); /* Move a barra lateral de volta para a tela quando ativa */
+}
+
+.content {
+  flex: 1; /* Faz com que o conteúdo ocupe o espaço restante */
+  background-color: #f0f0f0; /* Define a cor de fundo do conteúdo */
+  padding: 20px; /* Adiciona um espaçamento interno */
+}
+
+.header {
+  width: 100%; /* Define a largura como 100% da largura da página */
+  height: 30px; /* Define uma altura fixa para o cabeçalho */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4bb2d1; /* Cor de fundo do cabeçalho */
+  padding: 10px;
+  position: fixed; /* Fixa o cabeçalho no topo da página */
+  top: 0; /* Alinha o cabeçalho no topo da página */
+  left: 0; /* Alinha o cabeçalho à esquerda da página */
+  z-index: 999; /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+
+.footer {
+  background-color: #4bb2d1;
+  color: #0b0c72;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto', cursive;
+  
+}
+
+.contacts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center; /* Centraliza os itens na horizontal */
+}
+
+.contacts-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Para que os itens da lista sejam exibidos lado a lado */
+}
+
+.contacts-list li {
+  margin-right: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+.contacts-list li:last-child {
+  margin-right: 0; /* Remove a margem do último item para evitar espaçamento excessivo */
+}
+
+.contacts-list li a {
+  color: #0b0c72;
+  text-decoration: none;
+}
+
+.contacts-list li a:hover {
+  color: #e41c1c;
+}
+
+
+/* Botão de menu lateral */
+#toggleSidebar {
+  background-color: #4bb2d1; /* Define a cor de fundo do botão como azul */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda */
+  padding: 10px; /* Adiciona um espaçamento interno */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  position: fixed; /* Fixa o botão na posição */
+  top: 20px; /* Define a distância do topo */
+  left: 20px; /* Define a distância da esquerda */
+  z-index: 1000; /* Define a ordem de empilhamento */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+}
+
+#toggleSidebar:hover {
+  background-color: #555; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Botões de controle */
+#controls {
+  position: absolute; /* Define a posição absoluta */
+  top: 10px; /* Define a distância do topo */
+  right: 20px; /* Define a distância da direita */
+  z-index: 999; /* Define a ordem de empilhamento */
+  display: flex; /* Exibe os elementos como um flex container */
+  align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+#playPauseAudio,
+#playPauseSpeech,
+#increaseFont,
+#decreaseFont {
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  background-color: #4bb2d1; /* Define a cor de fundo dos botões como azul */
+  color: #fff; /* Define a cor do texto como branco */
+  border: none; /* Remove a borda */
+  padding: 10px 15px; /* Adiciona um espaçamento interno */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  margin-right: 10px; /* Adiciona margem à direita */
+}
+
+#playPauseAudio:hover,
+#playPauseSpeech:hover,
+#increaseFont:hover,
+#decreaseFont:hover {
+  background-color: #1c809f; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilizações específicas para o conteúdo */
+.main {
+  margin-bottom: 30px; /* Adiciona espaçamento inferior */
+}
+
+.main ol {
+  padding-left: 20px; /* Adiciona recuo nas listas ordenadas */
+}
