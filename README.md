@@ -1,6 +1,7 @@
 
 ![Macbook-Air-127 0 0 1](https://github.com/DVALENASCIMENTO/harmonize-se_page_web/assets/105137007/65a2dd8b-b7a2-4427-9ce0-5efb2de64c22)
 Projeto "Harmonize-se - Descubra o Equilíbrio Interior"
+https://dvalenascimento.github.io/harmonize-se_page_web/
 
 Este projeto consiste em um site denominado "Harmonize-se", que visa promover o equilíbrio interior e o bem-estar físico, mental, emocional e espiritual. Através de conteúdos relacionados a práticas de mindfulness, autoconhecimento, cuidado com o corpo, conexão espiritual, entre outros, o site oferece uma abordagem holística para alcançar uma vida mais equilibrada e harmoniosa.
 
